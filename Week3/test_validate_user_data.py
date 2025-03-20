@@ -1,5 +1,5 @@
 import pytest
-from validate_user_data import validate_user_data
+from Week3.validate_user_data import validate_user_data
 
 def test_valid_data():
     user_data = {
