@@ -1,25 +1,23 @@
-# Week 2 Exercises  
+# AI-Assisted Data Analysis Tool
 
-This week includes two Python exercises:  
-1. **Fibonacci Sequence Calculation**  
-2. **Refactoring a Filtering Function**  
+## **Overview**
+This is a command-line tool that analyzes CSV data, providing:
+- Basic statistics (mean, median, mode, standard deviation)
+- Histograms for numeric columns
+- Correlation analysis between two columns
+- Outlier detection
 
-## **1️⃣ Fibonacci Sequence (`fibonacci-prompt.py`)**  
+## **Usage**
+Run the script with different commands:
 
-### **Description:**  
-This script calculates the Fibonacci number at a given position using recursion.  
+### **1. Get Statistics**
+python data_analysis.py sample_data.csv stats temperature
 
-### **How It Works:**  
-- The user inputs a position (`n`) in the Fibonacci sequence.  
-- The program computes the `n`-th Fibonacci number recursively.  
-- If the input is negative, it raises a `ValueError`.  
+#### **2. Generate Histogram
+python data_analysis.py sample_data.csv histogram humidity 15
 
-## **2️⃣ Refactoring a Filtering Function (`refactoring.py`)**
+#### **3. Find Correlation
+python data_analysis.py sample_data.csv correlation temperature humidity
 
-### **Description:**
-This script filters a list of dictionaries based on a specified type (t).
-
-### **How It Works:**
-- It defines a function f(l, t) that filters items by type.
-- A list of items (items) is provided, each containing an id, t (type), and price.
-- The function returns a list of all items matching the given type.
+#### **4. Detect Outliers
+python data_analysis.py sample_data.csv outliers wind_speed 2.0
