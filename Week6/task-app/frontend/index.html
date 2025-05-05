@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Task List</h1>
+
+    <div class="form-container">
+      <h2>Add Task</h2>
+      <form id="task-form">
+        <label for="task-title">Task Title:</label>
+        <input type="text" id="task-title" required />
+        <label for="task-completed">Completed:</label>
+        <input type="checkbox" id="task-completed" />
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+
+    <ul id="task-list" class="task-list">
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
