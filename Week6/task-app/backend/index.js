@@ -19,12 +19,6 @@ app.get('/tasks', async (req, res) => {
   res.json(tasks);
 });
 
-// app.post('/tasks', async (req, res) => {
-//   const task = new Task(req.body);
-//   await task.save();
-//   res.status(201).json(task);
-// });
-
 app.post('/tasks', async (req, res) => {
   console.log('Received request body:', req.body);
   const task = new Task(req.body);
@@ -39,7 +33,7 @@ app.post('/tasks', async (req, res) => {
 
 app.patch('/tasks/:id', async (req, res) => {
   const { id } = req.params;
-  const { completed } = req.body;  // new completion status from the request
+  const { completed } = req.body;
 
   try {
     const task = await Task.findByIdAndUpdate(id, { completed }, { new: true });
